@@ -41,7 +41,7 @@ namespace PersonAPI
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
             app.UseEndpoints(endpoints =>
             {               
                 endpoints.MapControllers();
